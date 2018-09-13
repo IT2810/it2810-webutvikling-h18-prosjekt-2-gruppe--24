@@ -8,6 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      tab: 1,
       currentImageUrl:
         "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       currentAudioSourceUrl:
@@ -32,6 +33,12 @@ class App extends Component {
         </p>
       )
     };
+    this.setTab = this.setTab.bind(this);
+  }
+
+  setTab(tab) {
+    console.log("Called set tab with tab = " + tab);
+    this.setState({ tab: tab });
   }
 
   render() {
@@ -39,10 +46,10 @@ class App extends Component {
       <div className="App" id="topFlexBox">
         <div id="innhold">
           <div>
-            <h1>Kunstoverskrift</h1>
+            <h1>Kunstoverskrift – Fane {this.state.tab}</h1>
           </div>
           <div>
-            <Tabs />
+            <Tabs setTab={this.setTab} />
           </div>
           <div>
             <ArtDisplay
