@@ -9,6 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       tab: 1,
+      pictureOption: "",
+      textOption: "",
+      musicOption: "",
       currentImageUrl:
         "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       currentAudioSourceUrl:
@@ -34,6 +37,24 @@ class App extends Component {
       )
     };
     this.setTab = this.setTab.bind(this);
+    this.handlePictureChange = this.handlePictureChange.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleMusicChange = this.handleMusicChange.bind(this);
+  }
+
+  handlePictureChange(value) {
+    this.setState({ pictureOption: value });
+    console.log(this.state);
+  }
+
+  handleTextChange(value) {
+    this.setState({ textOption: value });
+    console.log(this.state);
+  }
+
+  handleMusicChange(value) {
+    this.setState({ musicOption: value });
+    console.log(this.state);
   }
 
   setTab(tab) {
@@ -60,7 +81,11 @@ class App extends Component {
           </div>
         </div>
         <div>
-          <OptionPanel />
+          <OptionPanel
+            handlePictureChange={this.handlePictureChange}
+            handleTextChange={this.handleTextChange}
+            handleMusicChange={this.handleMusicChange}
+          />
         </div>
       </div>
     );
