@@ -7,7 +7,32 @@ import ArtDisplay from "./components/ArtDisplay";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { tab: 1 };
+    this.state = {
+      tab: 1,
+      currentImageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      currentAudioSourceUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/6/61/DescenteInfinie.ogg",
+      currentText: (
+        <p>
+          Ja, vi elsker dette landet,
+          <br />
+          som det stiger frem,
+          <br />
+          furet, værbitt over vannet,
+          <br />
+          med de tusen hjem.
+          <br />
+          Elsker, elsker det og tenker
+          <br />
+          på vår far og mor
+          <br />
+          og den saganatt som senker
+          <br />
+          drømme på vår jord.
+        </p>
+      )
+    };
     this.setTab = this.setTab.bind(this);
   }
 
@@ -27,7 +52,11 @@ class App extends Component {
             <Tabs setTab={this.setTab} />
           </div>
           <div>
-            <ArtDisplay />
+            <ArtDisplay
+              imageUrl={this.state.currentImageUrl}
+              audioSourceUrl={this.state.currentAudioSourceUrl}
+              text={this.state.currentText}
+            />
           </div>
         </div>
         <div>
