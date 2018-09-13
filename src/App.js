@@ -5,6 +5,14 @@ import OptionPanel from "./components/OptionPanel";
 import ArtDisplay from "./components/ArtDisplay";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentImageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg"
+    };
+  }
+
   render() {
     return (
       <div className="App" id="topFlexBox">
@@ -16,7 +24,7 @@ class App extends Component {
             <Tabs />
           </div>
           <div>
-            <ArtDisplay />
+            <ArtDisplay imageUrl={this.state.currentImageUrl} />
           </div>
         </div>
         <div>
