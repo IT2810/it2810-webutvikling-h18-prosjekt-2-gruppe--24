@@ -43,3 +43,13 @@
     transform: rotate(360deg);
   }
 } */
+
+/* OptionPanel*/
+label:hover,
+input:hover {
+  cursor: pointer;
+}
+
+.optionTitle {
+  margin-bottom: 0;
+}

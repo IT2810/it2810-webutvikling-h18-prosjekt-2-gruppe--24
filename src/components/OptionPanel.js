@@ -5,9 +5,8 @@ class OptionPanel extends Component {
   render() {
     return (
       <div className="Tabs">
-        <p className="placeholder-text">VALGPANEL: </p>
         <form>
-          <h4>Bilde</h4>
+          <h4 className="optionTitle">Bilde</h4>
           <div className="radio">
             <label>
               <input
@@ -47,7 +46,7 @@ class OptionPanel extends Component {
               Bildetype 3
             </label>
           </div>
-          <h4>Tekst</h4>
+          <h4 className="optionTitle">Tekst</h4>
           <div className="radio">
             <label>
               <input
@@ -87,7 +86,7 @@ class OptionPanel extends Component {
               Teksttype 3
             </label>
           </div>
-          <h4>Musikk</h4>
+          <h4 className="optionTitle">Musikk</h4>
           <div className="radio">
             <label>
               <input
