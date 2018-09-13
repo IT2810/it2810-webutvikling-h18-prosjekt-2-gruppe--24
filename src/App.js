@@ -5,6 +5,33 @@ import OptionPanel from "./components/OptionPanel";
 import ArtDisplay from "./components/ArtDisplay";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      pictureOption: "",
+      textOption: "",
+      musicOption: ""
+    };
+    this.handlePictureChange = this.handlePictureChange.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleMusicChange = this.handleMusicChange.bind(this);
+  }
+
+  handlePictureChange(value) {
+    this.setState({ pictureOption: value });
+    console.log(this.state);
+  }
+
+  handleTextChange(value) {
+    this.setState({ textOption: value });
+    console.log(this.state);
+  }
+
+  handleMusicChange(value) {
+    this.setState({ musicOption: value });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div className="App" id="topFlexBox">
@@ -20,7 +47,11 @@ class App extends Component {
           </div>
         </div>
         <div>
-          <OptionPanel />
+          <OptionPanel
+            handlePictureChange={this.handlePictureChange}
+            handleTextChange={this.handleTextChange}
+            handleMusicChange={this.handleMusicChange}
+          />
         </div>
       </div>
     );
