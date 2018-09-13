@@ -15,26 +15,12 @@ class ArtDisplay extends Component {
           />
         </div>
         <div id="soundTextBox">
-          <div>Lydavspiller</div>
           <div>
-            <p>
-              Ja, vi elsker dette landet,
-              <br />
-              som det stiger frem,
-              <br />
-              furet, værbitt over vannet,
-              <br />
-              med de tusen hjem.
-              <br />
-              Elsker, elsker det og tenker
-              <br />
-              på vår far og mor
-              <br />
-              og den saganatt som senker
-              <br />
-              drømme på vår jord.
-            </p>
+            <audio controls>
+              <source src={this.props.audioSourceUrl} type="audio/ogg" />
+            </audio>
           </div>
+          <div>{this.props.text}</div>
         </div>
       </div>
     );
