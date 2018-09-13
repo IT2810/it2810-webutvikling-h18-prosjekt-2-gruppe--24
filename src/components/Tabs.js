@@ -9,7 +9,6 @@ class Tabs extends Component {
         <button onClick={() => this.props.setTab(2)}>2</button>
         <button onClick={() => this.props.setTab(3)}>3</button>
         <button onClick={() => this.props.setTab(4)}>4</button>
-        <p className="placeholder-text">Her kommer det faner.</p>
       </div>
     );
   }
