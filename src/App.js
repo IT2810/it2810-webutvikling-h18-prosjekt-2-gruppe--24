@@ -51,16 +51,17 @@ class App extends Component {
     this.setState({ textOption: value });
 
     fetch("resources/tekst" + value + "-fane" + this.state.tab + ".json")
-      .then(res => {
-        console.log(res.json());
-        // return res.json()["text"];
-      })
-      .then(text => {
-        console.log(text);
-        this.setState({
-          currentText: <p>{text}</p>
-        });
-      });
+      .then(res => res.json())
+      .then(
+        result => {
+          this.setState({
+            currentText: result.text
+          });
+        },
+        error => {
+          console.log("Klarte ikke å finne tekst");
+        }
+      );
 
     console.log(this.state);
   }
