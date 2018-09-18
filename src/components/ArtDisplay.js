@@ -20,7 +20,7 @@ class ArtDisplay extends Component {
               <source src={this.props.audioSourceUrl} type="audio/ogg" />
             </audio>
           </div>
-          <div>{this.props.text}</div>
+          <div id="text">{this.props.text}</div>
         </div>
       </div>
     );

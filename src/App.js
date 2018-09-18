@@ -49,6 +49,19 @@ class App extends Component {
 
   handleTextChange(value) {
     this.setState({ textOption: value });
+
+    fetch("resources/tekst" + value + "-fane" + this.state.tab + ".json")
+      .then(res => {
+        console.log(res.json());
+        // return res.json()["text"];
+      })
+      .then(text => {
+        console.log(text);
+        this.setState({
+          currentText: <p>{text}</p>
+        });
+      });
+
     console.log(this.state);
   }
 
