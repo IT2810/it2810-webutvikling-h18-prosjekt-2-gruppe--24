@@ -9,9 +9,12 @@ class App extends Component {
     super(props);
     this.state = {
       tab: 1,
-      pictureOption: "",
-      textOption: "",
-      musicOption: "",
+      imageCategories: ["Bilde 1", "Bilde 2", "Bilde 3"],
+      textCategories: ["Tekst 1", "Tekst 2", "Tekst 3"],
+      musicCategories: ["Musikk 1", "Musikk 2", "Musikk 3"],
+      pictureOption: 0,
+      textOption: 0,
+      musicOption: 0,
       //       currentImageUrl:
       // -        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       currentImage: "",
@@ -98,7 +101,12 @@ class App extends Component {
       <div className="App" id="topFlexBox">
         <div id="contentSlot">
           <div>
-            <h1>Kunstoverskrift – Fane {this.state.tab}</h1>
+            <h1>
+              {this.state.musicCategories[this.state.musicOption]}
+              {this.state.textCategories[this.state.textOption]}
+              {this.state.imageCategories[this.state.musicOption]}–
+              {this.state.tab}
+            </h1>
           </div>
           <div>
             <Tabs setTab={this.setTab} />
@@ -113,6 +121,11 @@ class App extends Component {
         </div>
         <div id="optionPanelSlot">
           <OptionPanel
+            imageCategories={this.state.imageCategories}
+            textCategories={this.state.textCategories}
+            musicCategories={this.state.musicCategories}
+            currentImage={this.state.currentImage}
+            currentText={this.state.currentText}
             handlePictureChange={this.handlePictureChange}
             handleTextChange={this.handleTextChange}
             handleMusicChange={this.handleMusicChange}
