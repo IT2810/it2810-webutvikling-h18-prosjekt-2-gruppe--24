@@ -10,7 +10,7 @@ class OptionPanel extends Component {
             type="radio"
             name="picture"
             onChange={() => {
-              this.props.handlePictureChange(i + 1);
+              this.props.handlePictureChange(i);
             }}
           />
           {str}
@@ -40,7 +40,7 @@ class OptionPanel extends Component {
             type="radio"
             name="music"
             onChange={() => {
-              this.props.handleMusicChange("option" + (i + 1));
+              this.props.handleMusicChange(i);
             }}
           />
           {str}
