@@ -44,6 +44,20 @@ class App extends Component {
 
   handlePictureChange(value) {
     this.setState({ pictureOption: value });
+
+    fetch("resources/picture" + value + "-fane" + this.state.tab + ".json")
+      .then(res => res)
+      .then(
+        result => {
+          this.setState({
+            currentText: result.text
+          });
+        },
+        error => {
+          console.log("Klarte ikke å finne tekst");
+        }
+      );
+
     console.log(this.state);
   }
 
