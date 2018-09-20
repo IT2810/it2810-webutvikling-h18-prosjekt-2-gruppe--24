@@ -99,7 +99,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" id="topFlexBox">
-        <div id="innhold">
+        <div id="contentSlot">
           <div>
             <h1>
               {this.state.musicCategories[this.state.musicOption]}
@@ -119,7 +119,7 @@ class App extends Component {
             />
           </div>
         </div>
-        <div>
+        <div id="optionPanelSlot">
           <OptionPanel
             imageCategories={this.state.imageCategories}
             textCategories={this.state.textCategories}
