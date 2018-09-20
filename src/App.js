@@ -96,7 +96,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" id="topFlexBox">
-        <div id="innhold">
+        <div id="contentSlot">
           <div>
             <h1>Kunstoverskrift – Fane {this.state.tab}</h1>
           </div>
@@ -111,7 +111,7 @@ class App extends Component {
             />
           </div>
         </div>
-        <div>
+        <div id="optionPanelSlot">
           <OptionPanel
             handlePictureChange={this.handlePictureChange}
             handleTextChange={this.handleTextChange}
