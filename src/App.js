@@ -12,8 +12,9 @@ class App extends Component {
       pictureOption: "",
       textOption: "",
       musicOption: "",
-      currentImageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      //       currentImageUrl:
+      // -        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      currentImage: "",
       currentAudioSourceUrl:
         "https://upload.wikimedia.org/wikipedia/commons/6/61/DescenteInfinie.ogg",
       currentText: (
@@ -44,11 +45,41 @@ class App extends Component {
 
   handlePictureChange(value) {
     this.setState({ pictureOption: value });
+
+    fetch("resources/picture" + value + "-fane" + this.state.tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
+      .then(response => response.text())
+      // .then(str => new window.DOMParser().parseFromString(str, "text/xml"))  // Siden vi bruker `dangerouslySetInnerHTML`, trenger vi ikke å parse til XML
+      .then(
+        result => {
+          console.log(result);
+          this.setState({
+            currentImage: result
+          });
+        },
+        error => {
+          console.log("Klarte ikke å finne bildet");
+        }
+      );
+
     console.log(this.state);
   }
 
   handleTextChange(value) {
     this.setState({ textOption: value });
+
+    fetch("resources/tekst" + value + "-fane" + this.state.tab + ".json")
+      .then(res => res.json())
+      .then(
+        result => {
+          this.setState({
+            currentText: result.text
+          });
+        },
+        error => {
+          console.log("Klarte ikke å finne tekst");
+        }
+      );
+
     console.log(this.state);
   }
 
@@ -74,7 +105,7 @@ class App extends Component {
           </div>
           <div>
             <ArtDisplay
-              imageUrl={this.state.currentImageUrl}
+              image={this.state.currentImage}
               audioSourceUrl={this.state.currentAudioSourceUrl}
               text={this.state.currentText}
             />
