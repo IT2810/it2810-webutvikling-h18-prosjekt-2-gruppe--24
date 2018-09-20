@@ -15,30 +15,9 @@ class App extends Component {
       pictureOption: 0,
       textOption: 0,
       musicOption: 0,
-      //       currentImageUrl:
-      // -        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       currentImage: "",
-      currentAudioSourceUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/6/61/DescenteInfinie.ogg",
-      currentText: (
-        <p>
-          Ja, vi elsker dette landet,
-          <br />
-          som det stiger frem,
-          <br />
-          furet, værbitt over vannet,
-          <br />
-          med de tusen hjem.
-          <br />
-          Elsker, elsker det og tenker
-          <br />
-          på vår far og mor
-          <br />
-          og den saganatt som senker
-          <br />
-          drømme på vår jord.
-        </p>
-      )
+      currentAudioSourceUrl: "",
+      currentText: ""
     };
     this.setTab = this.setTab.bind(this);
     this.handlePictureChange = this.handlePictureChange.bind(this);
