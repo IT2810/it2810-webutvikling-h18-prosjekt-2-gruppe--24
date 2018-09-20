@@ -9,6 +9,14 @@
   /* justify-content: space-between; */
 }
 
+#contentSlot {
+  flex-grow: 1;
+}
+
+#optionPanelSlot {
+  margin: 10px;
+}
+
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
