@@ -12,9 +12,9 @@ class App extends Component {
       imageCategories: ["Bilde 1", "Bilde 2", "Bilde 3"],
       textCategories: ["Tekst 1", "Tekst 2", "Tekst 3"],
       musicCategories: ["Musikk 1", "Musikk 2", "Musikk 3"],
-      pictureOption: 0,
-      textOption: 0,
-      musicOption: 0,
+      pictureOption: null,
+      textOption: null,
+      musicOption: null,
       currentImage: "",
       currentAudioSourceUrl: "",
       currentText: ""
@@ -25,14 +25,17 @@ class App extends Component {
     this.handleMusicChange = this.handleMusicChange.bind(this);
   }
 
-  handlePictureChange(value) {
+  handlePictureChange(value, tab = this.state.tab) {
+    if (value === null) {
+      return;
+    }
     this.setState({ pictureOption: value });
-    fetch("resources/pictures/" + value + "/" + this.state.tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
+    fetch("resources/pictures/" + value + "/" + tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
       .then(response => response.text())
       // .then(str => new window.DOMParser().parseFromString(str, "text/xml"))  // Siden vi bruker `dangerouslySetInnerHTML`, trenger vi ikke å parse til XML
       .then(
         result => {
-          console.log(result);
+          // console.log(result);
           this.setState({
             currentImage: result
           });
@@ -42,12 +45,15 @@ class App extends Component {
         }
       );
 
-    console.log(this.state);
+    // console.log(this.state);
   }
 
-  handleTextChange(value) {
+  handleTextChange(value, tab = this.state.tab) {
+    if (value === null) {
+      return;
+    }
     this.setState({ textOption: value });
-    fetch("resources/texts/" + value + "/" + this.state.tab + ".json")
+    fetch("resources/texts/" + value + "/" + tab + ".json")
       .then(res => res.json())
       .then(
         result => {
@@ -60,19 +66,25 @@ class App extends Component {
         }
       );
 
-    console.log(this.state);
+    // console.log(this.state);
   }
 
-  handleMusicChange(value) {
+  handleMusicChange(value, tab = this.state.tab) {
+    if (value === null) {
+      return;
+    }
     this.setState({ musicOption: value });
-    console.log(this.state);
-    let newUrl = "resources/sounds/" + value + "/" + this.state.tab + ".mp3";
+    // console.log(this.state);
+    let newUrl = "resources/sounds/" + value + "/" + tab + ".mp3";
     this.setState({ currentAudioSourceUrl: newUrl });
   }
 
   setTab(tab) {
     console.log("Called set tab with tab = " + tab);
     this.setState({ tab: tab });
+    this.handlePictureChange(this.state.pictureOption, tab);
+    this.handleTextChange(this.state.textOption, tab);
+    this.handleMusicChange(this.state.musicOption, tab);
   }
 
   render() {
@@ -81,9 +93,9 @@ class App extends Component {
         <div id="contentSlot">
           <div>
             <h1>
-              {this.state.musicCategories[this.state.musicOption]}
-              {this.state.textCategories[this.state.textOption]}
-              {this.state.imageCategories[this.state.pictureOption]}–
+              {this.state.musicCategories[this.state.musicOption]}{" "}
+              {this.state.textCategories[this.state.textOption]}{" "}
+              {this.state.imageCategories[this.state.pictureOption]}{" "}
               {this.state.tab}
             </h1>
           </div>
