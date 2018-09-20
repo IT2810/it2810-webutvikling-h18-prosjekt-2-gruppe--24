@@ -87,6 +87,8 @@ class App extends Component {
   handleMusicChange(value) {
     this.setState({ musicOption: value });
     console.log(this.state);
+    let newUrl = "resources/sounds/" + value + "/" + this.state.tab + ".mp3";
+    this.setState({ currentAudioSourceUrl: newUrl });
   }
 
   setTab(tab) {

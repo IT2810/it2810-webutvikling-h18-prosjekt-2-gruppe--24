@@ -13,8 +13,8 @@ class ArtDisplay extends Component {
         </div>
         <div id="soundTextBox">
           <div>
-            <audio controls>
-              <source src={this.props.audioSourceUrl} type="audio/ogg" />
+            <audio src={this.props.audioSourceUrl} type="audio/mpeg" controls>
+              {/* <source src={this.props.audioSourceUrl} type="audio/mp3" /> */}
             </audio>
           </div>
           <div id="text">{this.props.text}</div>
