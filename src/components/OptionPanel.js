@@ -4,7 +4,7 @@ import "../App.css";
 class OptionPanel extends Component {
   render() {
     const imageItems = this.props.imageCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
@@ -19,7 +19,7 @@ class OptionPanel extends Component {
     ));
 
     const textItems = this.props.textCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
@@ -34,7 +34,7 @@ class OptionPanel extends Component {
     ));
 
     const musicItems = this.props.musicCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
