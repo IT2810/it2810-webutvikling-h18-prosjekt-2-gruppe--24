@@ -4,13 +4,13 @@ import "../App.css";
 class OptionPanel extends Component {
   render() {
     const imageItems = this.props.imageCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
             name="picture"
             onChange={() => {
-              this.props.handlePictureChange("option" + (i + 1));
+              this.props.handlePictureChange(i);
             }}
           />
           {str}
@@ -19,13 +19,13 @@ class OptionPanel extends Component {
     ));
 
     const textItems = this.props.textCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
             name="text"
             onChange={() => {
-              this.props.handleTextChange("option" + (i + 1));
+              this.props.handleTextChange(i);
             }}
           />
           {str}
@@ -34,13 +34,13 @@ class OptionPanel extends Component {
     ));
 
     const musicItems = this.props.musicCategories.map((str, i) => (
-      <div className="radio">
+      <div key={i} className="radio">
         <label>
           <input
             type="radio"
             name="music"
             onChange={() => {
-              this.props.handleMusicChange("option" + (i + 1));
+              this.props.handleMusicChange(i);
             }}
           />
           {str}
