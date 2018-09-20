@@ -102,7 +102,7 @@ class App extends Component {
             <h1>
               {this.state.musicCategories[this.state.musicOption]}
               {this.state.textCategories[this.state.textOption]}
-              {this.state.imageCategories[this.state.musicOption]}–
+              {this.state.imageCategories[this.state.pictureOption]}–
               {this.state.tab}
             </h1>
           </div>
