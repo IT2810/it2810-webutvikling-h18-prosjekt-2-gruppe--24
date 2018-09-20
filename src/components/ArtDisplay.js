@@ -7,12 +7,8 @@ class ArtDisplay extends Component {
     return (
       <div id="artDisplayBox" className="ArtDisplay">
         <div id="imageSlot">
-          <img
-            src={this.props.imageUrl}
-            height="auto"
-            width="100%"
-            alt="Bilde"
-          />
+          {/* <img src={this.props.image} height="auto" width="100%" alt="Bilde" /> */}
+          <div dangerouslySetInnerHTML={{ __html: this.props.image }} />;
         </div>
         <div id="soundTextBox">
           <div>
