@@ -101,7 +101,12 @@ class App extends Component {
       <div className="App" id="topFlexBox">
         <div id="innhold">
           <div>
-            <h1>Kunstoverskrift – Fane {this.state.tab}</h1>
+            <h1>
+              {this.state.musicCategories[this.state.musicOption]}
+              {this.state.textCategories[this.state.textOption]}
+              {this.state.imageCategories[this.state.musicOption]}–
+              {this.state.tab}
+            </h1>
           </div>
           <div>
             <Tabs setTab={this.setTab} />
