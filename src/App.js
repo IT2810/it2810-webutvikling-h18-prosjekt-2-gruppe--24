@@ -48,8 +48,7 @@ class App extends Component {
 
   handlePictureChange(value) {
     this.setState({ pictureOption: value });
-
-    fetch("resources/picture" + value + "-fane" + this.state.tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
+    fetch("resources/pictures/" + value + "/" + this.state.tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
       .then(response => response.text())
       // .then(str => new window.DOMParser().parseFromString(str, "text/xml"))  // Siden vi bruker `dangerouslySetInnerHTML`, trenger vi ikke å parse til XML
       .then(
@@ -69,8 +68,7 @@ class App extends Component {
 
   handleTextChange(value) {
     this.setState({ textOption: value });
-
-    fetch("resources/tekst" + value + "-fane" + this.state.tab + ".json")
+    fetch("resources/texts/" + value + "/" + this.state.tab + ".json")
       .then(res => res.json())
       .then(
         result => {
