@@ -9,9 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       tab: 1,
-      pictureOption: "",
-      textOption: "",
-      musicOption: "",
+      pictureOption: 0,
+      textOption: 0,
+      musicOption: 0,
       //       currentImageUrl:
       // -        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
       currentImage: "",
@@ -113,6 +113,8 @@ class App extends Component {
         </div>
         <div>
           <OptionPanel
+            currentImage={this.currentImage}
+            currentText={this.currentText}
             handlePictureChange={this.handlePictureChange}
             handleTextChange={this.handleTextChange}
             handleMusicChange={this.handleMusicChange}
