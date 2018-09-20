@@ -3,8 +3,7 @@ import "../App.css";
 
 class OptionPanel extends Component {
   render() {
-    const imageCategories = ["Bilde 1", "Bilde 2", "Bilde 3"];
-    const imageItems = imageCategories.map((str, i) => (
+    const imageItems = this.props.imageCategories.map((str, i) => (
       <div className="radio">
         <label>
           <input
@@ -19,8 +18,7 @@ class OptionPanel extends Component {
       </div>
     ));
 
-    const textCategories = ["Tekst 1", "Tekst 2", "Tekst 3"];
-    const textItems = textCategories.map((str, i) => (
+    const textItems = this.props.textCategories.map((str, i) => (
       <div className="radio">
         <label>
           <input
@@ -35,8 +33,7 @@ class OptionPanel extends Component {
       </div>
     ));
 
-    const musicCategories = ["Musikk 1", "Musikk 2", "Musikk 3"];
-    const musicItems = musicCategories.map((str, i) => (
+    const musicItems = this.props.musicCategories.map((str, i) => (
       <div className="radio">
         <label>
           <input

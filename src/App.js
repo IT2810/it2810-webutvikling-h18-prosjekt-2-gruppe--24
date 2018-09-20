@@ -9,6 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       tab: 1,
+      imageCategories: ["Bilde 1", "Bilde 2", "Bilde 3"],
+      textCategories: ["Tekst 1", "Tekst 2", "Tekst 3"],
+      musicCategories: ["Musikk 1", "Musikk 2", "Musikk 3"],
       pictureOption: 0,
       textOption: 0,
       musicOption: 0,
@@ -113,8 +116,11 @@ class App extends Component {
         </div>
         <div>
           <OptionPanel
-            currentImage={this.currentImage}
-            currentText={this.currentText}
+            imageCategories={this.state.imageCategories}
+            textCategories={this.state.textCategories}
+            musicCategories={this.state.musicCategories}
+            currentImage={this.state.currentImage}
+            currentText={this.state.currentText}
             handlePictureChange={this.handlePictureChange}
             handleTextChange={this.handleTextChange}
             handleMusicChange={this.handleMusicChange}
