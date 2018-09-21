@@ -10,6 +10,8 @@ Skrive dokumentasjon i henhold til kravene i [oppgavebeskrivelsen](https://ntnu.
 
 - [ ] Forklare hvordan vi har håndtert følgende (med caching?):
 > Når filen først er lest, så skal innholdet lagres på klienten slik at de ikke blir å lastes flere ganger hvis en bruker blar frem og tilbake i en utstilling.
+  - Dette skjer automatisk når man bruker AJAX-teknikken.
+  - [Skjermbildet av det at faktisk fungerer]
 
 - [ ] Forklare vår løsning for responsiv design. Spesielt hvorfor vi ikke har brukt viewport og media-queries.
 
