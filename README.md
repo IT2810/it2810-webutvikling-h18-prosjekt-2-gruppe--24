@@ -1,5 +1,5 @@
 # IT2810 – Prosjekt 2
-Dette er det andre prosjekt i IT2810 Webutvikling. Gruppen består av Mathias Bynke, Henrik Grønbech og Maria Osen
+Dette er det andre prosjektet i IT2810 Webutvikling på NTNU høsten 2018. Gruppen består av Mathias Bynke, Henrik Grønbech og Maria Osen.
 
 ## Dokumentasjon
 
@@ -14,6 +14,7 @@ Når brukeren først laster inn siden, blir hen vist en tilfeldig fane og en til
 
 ### React
 Vi har basert løsningen på React og JSX.
+Øverst 
 Vi har lagd tre komponenter med klasser (i tillegg til App) ...
 Sender funksjoner som props til barnekomponenter for å ...
 
