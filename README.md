@@ -1,9 +1,16 @@
 # IT2810 – Prosjekt 2
 Dette er det andre prosjektet i IT2810 Webutvikling på NTNU høsten 2018. Gruppen består av Mathias Bynke, Henrik Grønbech og Maria Osen.
 
-## Dokumentasjon
+## Hvordan kjøre
+Hvis du vil kjøre prosjektet lokalt, må du først klone dette repoet. Naviger deretter til rotmappen i prosjektet og kjør disse kommandoene
+```bash
+npm i # kort for `npm install`
+npm start
+```
+Nettsiden skal også være tilgjengelig på http://it2810-28.idi.ntnu.no/prosjekt2
 
-### Hvordan kjøre
+
+## Dokumentasjon
 
 ### Funksjonalitet
 Nettsiden skulle ifølge kravspesifikasjonen la brukeren veksle mellom 3 kategorier av 3 forskjellige medietyper, tekst, lyd og bilde.
