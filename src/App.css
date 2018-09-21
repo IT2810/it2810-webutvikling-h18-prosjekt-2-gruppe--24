@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
 .App {
+  font-family: "Quicksand", sans-serif;
   text-align: center;
   /* align-items: center; */
 }
