@@ -24,12 +24,9 @@ svg {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-start;
-  /* align-content: center; */
 
   flex-grow: 1;
   flex-basis: 200px;
-
-  /* background: green; */
 }
 
 #text {
@@ -38,8 +35,4 @@ svg {
   white-space: pre-line;
 
   margin: 10px 10px 10px 10px;
-
-  /* flex-grow: 1; */
-
-  /* background: yellow; */
 }
