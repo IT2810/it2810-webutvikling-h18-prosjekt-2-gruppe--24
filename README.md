@@ -81,24 +81,26 @@ Det blir også lettere å tolke commit-treet i ettertid og se hva som skjedde n�
 
 ### Testing
 
-Vi har fulgt disse sjekklisten når vi har testete nettsiden
+Vi har fulgt denne sjekklisten når vi har testet nettsiden.
 
-- Hele siden skal lastes inn. Dette gjelder startbildet, lydavstiller, knappene på fanen, radioknapper
+- Hele siden skal lastes inn. Dette gjelder startbildet, lydavspiller, knappene på fanen, radioknapper, riktig font
 - Alle knappene skal ha korrekt oppførsel
 - Lydavspilleren skal fungere
 - Layouten på siden skal være slik som spesifisert i avsnittet om responsiv design
 
-- Google chrome
+#### Oversikt over hvilke plattformer vi har testet på
+
+- Google chrome/Chromium
   - [x] MacOS
   - [ ] Windows 10
   - [x] Android
     - Her er det ikke noe boks rundt knappene til fanen. Funksjonaliteten fungerer ellers fint.
-  - [ ] Ubuntu
+  - [x] Ubuntu
 - Firefox
   - [x] MacOS
   - [ ] Windows 10
-  - [ ] Android
-  - [ ] Ubuntu
+  - [x] Android
+  - [x] Ubuntu
 - Safari
   - [x] MacOS
   - [ ] iOs
