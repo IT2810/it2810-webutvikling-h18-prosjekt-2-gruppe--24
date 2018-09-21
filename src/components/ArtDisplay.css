@@ -4,15 +4,19 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
-  /* background: blue; */
-
   border-style: solid;
   border-width: 2px;
 }
 
 #imageSlot {
+  /* Gi mer plass til bildet enn til teksten og lydspilleren */
   flex-grow: 2;
   flex-basis: 500px;
+}
+
+svg {
+  /* Passe på at bildet ikke blir for stort */
+  max-height: 70vh;
 }
 
 #soundTextBox {

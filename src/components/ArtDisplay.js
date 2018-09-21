@@ -16,7 +16,7 @@ class ArtDisplay extends Component {
       <div id="artDisplayBox" className="ArtDisplay">
         <div id="imageSlot">
           {/* <img src={this.props.image} height="auto" width="100%" alt="Bilde" /> */}
-          {/* Setter inn SVG-koden direkte som HTML. Virker usikkert, men er anbefalt av fagstaben */}
+          {/* Setter inn SVG-koden direkte som HTML. Virker usikkert, men er anbefalt av fagstaben. */}
           <div dangerouslySetInnerHTML={{ __html: this.props.image }} />
         </div>
         <div id="soundTextBox">
