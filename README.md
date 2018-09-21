@@ -23,6 +23,8 @@ Vi har løst dette ved å ha et valgpanel med radioknapper som lar brukeren velg
 Med faner (implementert med knapper øverst på siden) kan brukeren bytte mellom bildene, tekstene og musikken innen hver kategori.
 Når brukeren først laster inn siden, blir hen vist en tilfeldig fane og en tilfeldig kombinasjon av kategorier.
 
+Tittelen reflekterer valgene brukeren har gjort av kategorier og fane.
+
 ### React
 
 Vi har basert løsningen på React og JSX.
@@ -52,10 +54,20 @@ Man kan se dette ved å se på fanen som tilsvarere _Network_ i Google Chrome i 
 
 ### Responsiv design
 
-Hva som skjer når bredden på skjermen endrer seg (ting bytter plass fra høyre til under).
-Hva som skjer når høyden på skjermen endrer seg (maks høyde på bildet endrer seg).
+Vi har gjort flere grep for at siden skal se bra ut uavhengig av vindusstørrelse.
+Hele siden er implementert med flexbox.
+Innenfor `ArtDisplay` er flexbox satt opp med `wrap` slik at lydavspilleren og teksten blir plassert under bildet når det blir for trangt om plassen.
+I `App` er topp-flexbox-konteineren satt opp i `row` for brede vinduer og `column` for smale vinduer.
+Vi implementerte dette med media query i CSS for å kunne endre andre ting på siden samtidig som denne endringen.
+Spesielt viktig er det at kategoriene med valg blir plassert ved siden av hverandre istedenfor over hverandre (en flexbox blir satt til `row`).
+I tillegg har vi implementert enda en media query som slår inn dersom siden blir veldig smal (typisk mobilskjerm i høydeformat) og plasserer kategorivalgene under hverandre igjen.
+Vi syntes at det så best ut slik på mobile og andre små skjermer.
 
-- [ ] Forklare vår løsning for responsiv design. Spesielt hvorfor vi ikke har brukt viewport og media-queries.
+Størrelsen på bildet blir også tilpasset bredden på vinduet.
+For å unngå at bilder på høykant blir veldig store la vi inn en relativ høydebegrensning på bildene på 70 % av vinduets høyde. Dette har bare en effekt når vinduet er bredt, som på en PC-skjerm.
+
+Slik vi har satt det opp, blir bildene og andre elementer vist i sin fulle bredde slik de skal på en smal mobilskjerm.
+Vi har derfor ikke sett at å legge til en `viewport`-`meta`-tag gjør noen positiv forskjell, og vi har derfor valgt å ikke ha det med.
 
 ### Bruk av Git
 
