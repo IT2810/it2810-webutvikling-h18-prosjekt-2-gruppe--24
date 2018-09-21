@@ -34,8 +34,15 @@ Hva som skal vises, er til enhver tid bestemt av oppføringer i tilstanden til `
 Når brukeren trykker på en fane eller en kategori, er det funksjoner i `App` som oppdaterer disse oppføringene med `setState`.
 Disse funksjonene og oppføringene blir sendt ned til barnekomponentene som egenskaper («properties»).
 
-### Musikk
+### Bilder
+Alle bildene er hentet fra commons.wikimedia.org. De er alle åpne for fri bruk.
 
+### Tekster
+Sitatene er hentet fra https://www.brainyquote.com/ og under hvert sitat står det hvem som har skrevet de.
+Sangtekstene er nasjonalsangene i forskjellige land. Detaljert informasjon om hvem som har skrevet de finnes i mappen sammen med de filene.
+Barnesangene er hentet fra https://www.barnesanger.no
+
+### Musikk
 Musikken er hentet fra incompetech.com.
 Detaljert informasjon om hver låt er å finne i samme mappe som hver enkelt fil.
 Vi har redusert bitraten på filene for å redusere filstørrelsen til ca. 1–2 MB per fil.
@@ -92,15 +99,15 @@ Vi har fulgt denne sjekklisten når vi har testet nettsiden.
 
 - Google chrome/Chromium
   - [x] MacOS
-  - [ ] Windows 10
+  - [x] Windows 10
   - [x] Android
     - Her er det ikke noe boks rundt knappene til fanen. Funksjonaliteten fungerer ellers fint.
   - [x] Ubuntu
 - Firefox
   - [x] MacOS
-  - [ ] Windows 10
+  - [x] Windows 10
   - [x] Android
   - [x] Ubuntu
 - Safari
   - [x] MacOS
-  - [ ] iOs
+  - [x] iOs
