@@ -8,13 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 1,
+      tab: Math.floor(4 * Math.random() + 1),
       imageCategories: ["Bilde 1", "Bilde 2", "Bilde 3"],
       textCategories: ["Tekst 1", "Tekst 2", "Tekst 3"],
       musicCategories: ["Musikk 1", "Musikk 2", "Musikk 3"],
-      pictureOption: null,
-      textOption: null,
-      musicOption: null,
+      pictureOption: Math.floor(3 * Math.random()),
+      textOption: Math.floor(3 * Math.random()),
+      musicOption: Math.floor(3 * Math.random()),
       currentImage: "",
       currentAudioSourceUrl: "",
       currentText: ""
@@ -23,6 +23,8 @@ class App extends Component {
     this.handlePictureChange = this.handlePictureChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleMusicChange = this.handleMusicChange.bind(this);
+
+    this.setTab(this.state.tab);
   }
 
   handlePictureChange(value, tab = this.state.tab) {
@@ -44,7 +46,6 @@ class App extends Component {
           console.log("Klarte ikke å finne bildet");
         }
       );
-
     // console.log(this.state);
   }
 
@@ -112,6 +113,9 @@ class App extends Component {
         </div>
         <div id="optionPanelSlot">
           <OptionPanel
+            pictureOption={this.state.pictureOption}
+            textOption={this.state.textOption}
+            musicOption={this.state.musicOption}
             imageCategories={this.state.imageCategories}
             textCategories={this.state.textCategories}
             musicCategories={this.state.musicCategories}
