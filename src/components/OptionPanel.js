@@ -53,14 +53,22 @@ class OptionPanel extends Component {
     ));
 
     return (
-      <div className="Tabs">
+      <div className="OptionPanel">
         <form>
-          <h4 className="optionTitle">Bilde</h4>
-          {imageItems}
-          <h4 className="optionTitle">Tekst</h4>
-          {textItems}
-          <h4 className="optionTitle">Musikk</h4>
-          {musicItems}
+          <div id="optionForm">
+            <div>
+              <h4 className="optionTitle">Bilde</h4>
+              {imageItems}
+            </div>
+            <div>
+              <h4 className="optionTitle">Tekst</h4>
+              {textItems}
+            </div>
+            <div>
+              <h4 className="optionTitle">Musikk</h4>
+              {musicItems}
+            </div>
+          </div>
         </form>
       </div>
     );
