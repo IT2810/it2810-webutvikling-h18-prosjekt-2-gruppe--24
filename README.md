@@ -1,18 +1,9 @@
 # IT2810 – Prosjekt 2
-Dette er det andre prosjekt i IT2810 Webutvikling. Gruppen består av Mathias Bynke, Henrik Grønbech og Maria Osen
+Dette er det andre prosjektet i IT2810 Webutvikling på NTNU høsten 2018. Gruppen består av Mathias Bynke, Henrik Grønbech og Maria Osen.
 
 ## Dokumentasjon
 
 ### Hvordan kjøre
-
-Hvis du vil kjøre prosjektet lokalt, må du først klone dette repoet. Naviger deretter til rotmappen i prosjektet og kjør disse kommandoene
-
-```bash
-npm i # kort for `npm install`
-npm start
-```
-
-Nettsiden skal også være tilgjengelig på http://it2810-28.idi.ntnu.no/prosjekt2
 
 ### Funksjonalitet
 Nettsiden skulle ifølge kravspesifikasjonen la brukeren veksle mellom 3 kategorier av 3 forskjellige medietyper, tekst, lyd og bilde.
@@ -23,8 +14,11 @@ Når brukeren først laster inn siden, blir hen vist en tilfeldig fane og en til
 
 ### React
 Vi har basert løsningen på React og JSX.
-Vi har lagd tre komponenter med klasser (i tillegg til App) ...
-Sender funksjoner som props til barnekomponenter for å ...
+Rotkomponenten heter `App`. Den deler siden grovt inn i deler, hvorav tre er egne komponenter: `OptionPanel`, `ArtDisplay` og `Tabs`.
+Disse tar seg av henholdsvis valg av kategorier; visning av bilde, tekst og lydavspiller; og knappene som bytter mellom faner.
+Hva som skal vises, er til enhver tid bestemt av oppføringer i tilstanden til `App`-komponenten.
+Når brukeren trykker på en fane eller en kategori, er det funksjoner i `App` som oppdaterer disse oppføringene med `setState`.
+Disse funksjonene og oppføringene blir sendt ned til barnekomponentene som egenskaper («properties»).
 
 ### Musikk
 Musikken er hentet fra incompetech.com.
