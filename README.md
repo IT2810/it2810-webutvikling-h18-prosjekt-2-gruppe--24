@@ -14,6 +14,9 @@ Skrive dokumentasjon i henhold til kravene i [oppgavebeskrivelsen](https://ntnu.
 - [ ] Forklare vår løsning for responsiv design. Spesielt hvorfor vi ikke har brukt viewport og media-queries.
 
 - [ ] Forklare at vi har brukt pull request-er for å koble commits til issues.
+  - Det er lett å glemme å skrive issuen i hver eneste commit
+  - Det er god/bedre visuell støtte for å koble PR mot issues i GitHub
+
 
 - [ ] Dokumentere hvordan vi har testet (#40)
 
