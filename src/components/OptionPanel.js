@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../App.css";
-// import "./OptionPanel.css";
 
 class OptionPanel extends Component {
   render() {
@@ -10,7 +9,7 @@ class OptionPanel extends Component {
           <input
             type="radio"
             name="picture"
-            checked={this.props.pictureOption === i}
+            checked={this.props.imageOption === i}
             onChange={() => {
               this.props.handlePictureChange(i);
             }}

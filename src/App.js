@@ -12,7 +12,7 @@ class App extends Component {
       imageCategories: ["Frukt", "Flagg", "Dyr"],
       textCategories: ["Ettertenkende", "Nasjonalistiske", "Barnslige"],
       musicCategories: ["Jazzy", "Klassiske", "Elektroniske"],
-      pictureOption: Math.floor(3 * Math.random()),
+      imageOption: Math.floor(3 * Math.random()),
       textOption: Math.floor(3 * Math.random()),
       musicOption: Math.floor(3 * Math.random()),
       currentImage: "",
@@ -33,7 +33,7 @@ class App extends Component {
     if (value === null) {
       return;
     }
-    this.setState({ pictureOption: value });
+    this.setState({ imageOption: value });
     fetch("resources/pictures/" + value + "/" + tab + ".svg") // https://stackoverflow.com/questions/37693982/how-to-fetch-xml-with-fetch-api
       .then(response => response.text())
       // .then(str => new window.DOMParser().parseFromString(str, "text/xml"))  // Siden vi bruker `dangerouslySetInnerHTML`, trenger vi ikke å parse til XML
@@ -85,7 +85,7 @@ class App extends Component {
   setTab(tab) {
     console.log("Called set tab with tab = " + tab);
     this.setState({ tab: tab });
-    this.handlePictureChange(this.state.pictureOption, tab);
+    this.handlePictureChange(this.state.imageOption, tab);
     this.handleTextChange(this.state.textOption, tab);
     this.handleMusicChange(this.state.musicOption, tab);
   }
@@ -98,7 +98,7 @@ class App extends Component {
             <h1>
               {this.state.musicCategories[this.state.musicOption]}{" "}
               {this.state.textCategories[this.state.textOption]}{" "}
-              {this.state.imageCategories[this.state.pictureOption]}{" "}
+              {this.state.imageCategories[this.state.imageOption]}{" "}
               {this.state.tab}
             </h1>
           </div>
@@ -115,7 +115,7 @@ class App extends Component {
         </div>
         <div id="optionPanelSlot">
           <OptionPanel
-            pictureOption={this.state.pictureOption}
+            imageOption={this.state.imageOption}
             textOption={this.state.textOption}
             musicOption={this.state.musicOption}
             imageCategories={this.state.imageCategories}
