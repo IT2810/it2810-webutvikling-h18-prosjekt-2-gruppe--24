@@ -57,16 +57,16 @@ class OptionPanel extends Component {
         <form>
           <div id="optionForm">
             <div>
-              <h4 className="optionTitle">Bilde</h4>
-              {imageItems}
+              <h4 className="optionTitle">Musikk</h4>
+              {musicItems}
             </div>
             <div>
               <h4 className="optionTitle">Tekst</h4>
               {textItems}
             </div>
             <div>
-              <h4 className="optionTitle">Musikk</h4>
-              {musicItems}
+              <h4 className="optionTitle">Bilde</h4>
+              {imageItems}
             </div>
           </div>
         </form>
