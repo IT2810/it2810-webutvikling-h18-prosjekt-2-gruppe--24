@@ -1,0 +1,15 @@
+1.json
+Stor Britania's nasjonalsang.
+Skrevet av: Ukjent forfatter
+
+2.json
+Spania's nasjonalsang.
+Skrevet av: Ukjent forfatter
+
+3.json
+USA's nasjonalsang.
+Skrevet av: Francis Scott Key
+
+4.json
+Norge's nasjonalsang.
+Skrevet av: Bjørnstjerne Bjørnson
