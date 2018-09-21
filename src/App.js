@@ -23,7 +23,9 @@ class App extends Component {
     this.handlePictureChange = this.handlePictureChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleMusicChange = this.handleMusicChange.bind(this);
+  }
 
+  componentDidMount() {
     this.setTab(this.state.tab);
   }
 
