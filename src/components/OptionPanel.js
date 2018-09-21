@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import "./OptionPanel.css";
+// import "./OptionPanel.css";
 
 class OptionPanel extends Component {
   render() {
