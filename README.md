@@ -6,7 +6,11 @@ Dette er det andre prosjekt i IT2810 Webutvikling. Gruppen består av Mathias By
 ### Hvordan kjøre
 
 ### Funksjonalitet
-Hvordan har vi valgt å ha/implementert ting? Faner, valgknapper. 
+Nettsiden skulle ifølge kravspesifikasjonen la brukeren veksle mellom 3 kategorier av 3 forskjellige medietyper, tekst, lyd og bilde.
+Hen skulle også kunne vise 4 ulike konstellasjoner innen hver kategori.
+Vi har løst dette ved å ha et valgpanel med radioknapper som lar brukeren velge en kombinasjon av kategorier.
+Med faner (implementert med knapper øverst på siden) kan brukeren bytte mellom bildene, tekstene og musikken innen hver kategori.
+Når brukeren først laster inn siden, blir hen vist en tilfeldig fane og en tilfeldig kombinasjon av kategorier.
 
 ### React
 Vi har basert løsningen på React og JSX.
