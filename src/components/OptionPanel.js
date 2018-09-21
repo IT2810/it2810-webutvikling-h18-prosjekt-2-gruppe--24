@@ -9,6 +9,7 @@ class OptionPanel extends Component {
           <input
             type="radio"
             name="picture"
+            checked={this.props.pictureOption === i}
             onChange={() => {
               this.props.handlePictureChange(i);
             }}
@@ -24,6 +25,7 @@ class OptionPanel extends Component {
           <input
             type="radio"
             name="text"
+            checked={this.props.textOption === i}
             onChange={() => {
               this.props.handleTextChange(i);
             }}
@@ -39,6 +41,7 @@ class OptionPanel extends Component {
           <input
             type="radio"
             name="music"
+            checked={this.props.musicOption === i}
             onChange={() => {
               this.props.handleMusicChange(i);
             }}
