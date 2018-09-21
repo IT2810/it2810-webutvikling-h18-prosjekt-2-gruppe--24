@@ -71,9 +71,13 @@ Vi har derfor ikke sett at å legge til en `viewport`-`meta`-tag gjør noen posi
 
 ### Bruk av Git
 
-- [ ] Forklare at vi har brukt pull request-er for å koble commits til issues.
-  - Det er lett å glemme å skrive issuen i hver eneste commit
-  - Det er god/bedre visuell støtte for å koble PR mot issues i GitHub
+Vi har dokumentert prosessen gjennom issuer og pull request-er i GitHub.
+
+Oppgaven spesifiserer at committene skal markeres med hvilken issue de hører til.
+Vi har tidligere erfart at det er betraktelig mer oversiktlig å koble en _pull request_ til hver issue og samle commitene på denne måten, og vi har valgt å gjøre det slik i dette prosjektet.
+Det lar oss se på endringer og diskutere/justere dem i samarbeid før de blir dyttet til master, og GitHub har god støtte for denne koblingen mellom pull request-er og issuer.
+Dessuten er det mye lettere å glemme å tagge en issue i en commitmelding.
+Det blir også lettere å tolke commit-treet i ettertid og se hva som skjedde når.
 
 ### Testing
 
