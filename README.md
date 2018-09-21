@@ -77,4 +77,24 @@ Vi har derfor ikke sett at å legge til en `viewport`-`meta`-tag gjør noen posi
 
 ### Testing
 
-- [ ] Dokumentere hvordan vi har testet (#40)
+Vi har fulgt disse sjekklisten når vi har testete nettsiden
+
+- Hele siden skal lastes inn. Dette gjelder startbildet, lydavstiller, knappene på fanen, radioknapper
+- Alle knappene skal ha korrekt oppførsel
+- Lydavspilleren skal fungere
+- Layouten på siden skal være slik som spesifisert i avsnittet om responsiv design
+
+- Google chrome
+  - [x] MacOS
+  - [ ] Windows 10
+  - [x] Android
+    - Her er det ikke noe boks rundt knappene til fanen. Funksjonaliteten fungerer ellers fint.
+  - [ ] Ubuntu
+- Firefox
+  - [x] MacOS
+  - [ ] Windows 10
+  - [ ] Android
+  - [ ] Ubuntu
+- Safari
+  - [x] MacOS
+  - [ ] iOs
