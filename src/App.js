@@ -9,9 +9,9 @@ class App extends Component {
     super(props);
     this.state = {
       tab: Math.floor(4 * Math.random() + 1),
-      imageCategories: ["Bilde 1", "Bilde 2", "Bilde 3"],
-      textCategories: ["Tekst 1", "Tekst 2", "Tekst 3"],
-      musicCategories: ["Musikk 1", "Musikk 2", "Musikk 3"],
+      imageCategories: ["Frukt", "Flagg", "Dyr"],
+      textCategories: ["Ettertenkende", "Nasjonalistiske", "Barnslige"],
+      musicCategories: ["Jazzy", "Klassiske", "Elektroniske"],
       pictureOption: Math.floor(3 * Math.random()),
       textOption: Math.floor(3 * Math.random()),
       musicOption: Math.floor(3 * Math.random()),
