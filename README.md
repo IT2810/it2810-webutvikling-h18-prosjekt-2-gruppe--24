@@ -11,7 +11,8 @@ npm i # kort for `npm install`
 npm start
 ```
 
-Nettsiden skal også være tilgjengelig på http://it2810-28.idi.ntnu.no/prosjekt2
+Nettsiden kommer til å være tilgjengelig på http://it2810-24.idi.ntnu.no/prosjekt2.
+Den er også tilgjengelig på https://it2810-2018-gr28-p2.firebaseapp.com/ (liten skrivefeil i navnet – vi er gruppe 24).
 
 ## Dokumentasjon
 
